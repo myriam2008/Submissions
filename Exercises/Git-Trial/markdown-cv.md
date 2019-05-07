@@ -1,4 +1,4 @@
-![alt PhotoCV]("")
+
 
 
 
@@ -29,4 +29,4 @@ Diploma in "Library Science" : ENSSIB - Lyon
 # **HOBBIES**
 - Pastry & Bakery
 - Walking and outdoor activities
-- 
+- Reading

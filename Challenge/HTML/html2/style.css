@@ -1,0 +1,48 @@
+img {
+    max-width: 100%;
+    height: auto; 
+    display: block;
+}
+
+p {
+    border: 1px solid powderblue;
+  }
+
+div {
+    background-color: lightblue;
+  }
+
+nav {
+    background: #444;
+    width: 100%;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+nav ul li a:hover {
+background: #03ADDF; 
+
+}
+ 
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+}
+
+    nav ul li a:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+
+   

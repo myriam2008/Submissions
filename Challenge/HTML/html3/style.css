@@ -1,0 +1,145 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.mainContainer {
+  width: 900px;
+  margin: 0 auto;
+  color: #fff
+}
+
+.div-title {
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px;
+   
+    text-align: center;
+    background-color: #1D4851;
+    
+  }
+
+  .horizontal-menu {
+    background: #414040;
+    width: 100%;
+ margin: 0 auto;
+
+    
+}
+
+.horizontal-menu ul {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.horizontal-menu ul li {
+    display: inline-block;
+    list-style-type: none;
+   margin: 0 auto;
+    padding: 10px 0;
+}
+
+
+ 
+.horizontal-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    margin: 0 auto;
+    width: 65em;;
+width: 65em; 
+}
+body {
+  background-color: rgb(12, 33, 37);
+  
+}
+
+.main-menu {
+  
+ 
+  color: #fff;
+  
+}
+
+.main-menu ul li a {
+  color: #fff;
+
+}
+
+
+  
+
+.left-container {
+  margin: 0 auto;
+  
+  color: #fff;
+  width: 20%;
+  float: left;
+}
+ .container-2 {
+   width: 80%;
+   margin: 0 auto;
+   float: right;
+   color: #fff;
+ }
+.div-sub {
+  margin: 0 auto;
+  float:left;
+  width:35%;
+  color: #fff;
+}
+
+.div-services {
+  
+  margin: 0 45px;
+  float:left;
+  width:35%;
+  color: #fff;
+
+}
+.btn-container
+{
+  background-color: #e7e7e7; color: black;
+  width: 40%;
+}
+
+
+
+.div-form {
+  width: 80%;
+  background-color: #e7e7e7;
+}
+
+.contact {
+  float: left;
+  display: block;
+  margin-top: 50px;
+
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: rgb(43, 46, 43);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #262726;
+}

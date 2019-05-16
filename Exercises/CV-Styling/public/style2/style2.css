@@ -1,0 +1,126 @@
+h1 { 
+    border-bottom: 1px solid grey; 
+   padding-bottom: 20px;
+}
+
+h2 {
+    display: none;
+}
+figure {
+    float: right;
+    margin-top: -60px;
+    transform: rotate(20deg);
+}
+#about {
+    margin-top: 0px;
+    text-align: justify;
+}
+
+#competencies {
+   display: flex;
+   flex-direction: column;
+  
+
+   
+    flex-wrap: wrap;
+   
+ 
+   
+    /* width: 150px; */
+  
+}
+.skills-primary {
+    display: flex;
+  padding-left: 200px;
+  justify-content: space-between;
+    width: 40%;
+    border: 1px solid white;
+    /* background-color: green; */
+    color: white;
+    height: 40px;
+    width: 700px;
+   
+
+}
+
+.skills-secondary {
+    display: flex;
+    padding-left: 200px;
+    padding-top: 20px;
+   
+    width: 40%;
+    border: 1px solid white;
+    /* background-color: green; */
+    color: white;
+    height: 40px;
+width: 700px;
+justify-content: space-between;
+    
+}
+.skill[data-skill="5"] 
+/* :after {
+    content: "✭";}    */
+    
+
+{
+    border: 1px solid white;
+    background-color: green;
+    color: white;
+height: 40px;
+width:150px; }
+
+ 
+
+.skill[data-skill="3"] {
+    border: 1px solid white;
+    background-color: green;
+    color: white;
+height: 40px;
+width:150px;
+}
+.skill[data-skill="1"] {
+    border: 1px solid white;
+    background-color: green;
+    color: white;
+height: 40px;
+width:150px;
+}
+
+.skill[data-skill="9"] {
+    border: 1px solid white;
+    background-color: green;
+    color: white;
+height: 40px;
+width:150px;
+}
+.skill[data-skill="7"] {
+    border: 1px solid white;
+    background-color: green;
+    color: white;
+height: 40px;
+width:150px;
+}  
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.experience-description {
+    padding-left: 200px;
+}
+
+.experience-details {
+    position:absolute;
+    right:200px;
+}
+h4 {
+    padding-left: 200px;
+    color: green;
+}
+
+.contacts {
+    display: flex;
+    
+}

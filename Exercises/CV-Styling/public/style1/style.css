@@ -1,98 +1,64 @@
-
+* {
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+}
 #\#wrapper {
     position: relative;
-    /* width: 100%; */
-    flex: 1;
+    width: 90%;
+   margin: 0 auto;
 }
+
+
+header {
+    background-color: lightgrey;
+    margin: 20px 0 60px 0px;
+    padding: 20px 0 10px 0;
+}
+
+
+hgroup {
+  float: left;
+  margin: 0 30px 0 200px;
+}
+
+hgroup h1, hgroup h2 {
+    color: red;
+}
+
+
 
 #contact {
     position: absolute;
-    top: -70px;
+    top: 10px;
     right: 0;
 }
-.contacts {
-    
-    
-    
-    /* height: 165px; */
-    width: 600px; 
-    /* line-height: 5px; */
 
-    color: red;
-   /* padding: 10px; */
-    /* margin-bottom: 40px; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* background: red  black; */
-  /* justify-content: space-between; */
+#contact h3 {
+    padding: 5px 0;
+}
+.contacts {
+    width: 600px; 
    background-color: black;
+
     }
 
  .contact {
      Display: flex;
 
  }   
-    
 
-header {
-    background-color: lightgrey;
+ .contact-type {
+   width: 150px;
+   background-color: red;
+   color: white;
+   padding: 2px 2px;
    
+}
     
-    /* align-items: center; */
-    /* vertical-align: middle; */
-    /* margin: auto; */  
-}
-
-figure {
-   
-    margin-left: 500px;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-}
-
-hgroup {
-    margin-left: 200px;
-   
-    align-items: center;
-    vertical-align: middle;
-}
-
-
-
-.content { display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 1fr 1fr 1fr;
-grid-template-rows: 40% 40% 20%;
-
-grid-gap: 20px;
-width: 1000px;
-    margin: 0px 150px 0px 150px;
-
-
-
-
- grid-template-areas: "ab comp"
-"exp edu"
-"hob hob"
-} 
- 
- #about {grid-area: ab;}
-#competencies {grid-area: comp;}
-#experiences {grid-area: exp;}
-#education {grid-area: edu;}
-#hobbies {grid-area: hob;}
-
-
-
-h3:before {
-    content:"• ";
-    color: red;
-    font-size: 40px;
-    
-}
 .contact-value {
-    width: 130px;
+    padding: 2px 8px;
+   
     
 }
 
@@ -102,13 +68,37 @@ h3:before {
    
 }
 
-.contact-type {
-    /* float: left; */
-   width: 150px;
-   background-color: red;
-   color: white;
-   
-}
+
+
+.content { display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 40% 40% 20%;
+    
+    grid-gap: 20px;
+    width: 1000px;
+        margin: 0px 150px 0px 150px;
+    
+    
+    
+    
+     grid-template-areas: "ab comp"
+    "exp edu"
+    "hob hob"
+    } 
+     
+     #about {grid-area: ab;}
+    #competencies {grid-area: comp;}
+    #experiences {grid-area: exp;}
+    #education {grid-area: edu;}
+    #hobbies {grid-area: hob;}
+    
+    #about h3::before, #competencies h3::before, #experiences h3::before, #education h3::before, #hobbies h3::before {
+        content:"• ";
+        color: red;
+        font-size: 40px;
+        
+    }
 
 
 h3 { 
@@ -194,7 +184,7 @@ h3 contact { visibility: hidden;
 }
 
 
-@media screen and (max-width: 680px) {
+@media (max-width: 680px) {
 
 figure {
    

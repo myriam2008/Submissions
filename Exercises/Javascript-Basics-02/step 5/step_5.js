@@ -1,8 +1,6 @@
 var img = document.querySelectorAll("img");
 console.log(img);
-// img[0].onmouseover = function () {
-//     img.src = "images/image1_2.jpg";
-//     console.log(img)
+
 
 img[0] = document.getElementById("image1").addEventListener("mouseover", function() {
     img[0].src = "images/image1_2.jpg";

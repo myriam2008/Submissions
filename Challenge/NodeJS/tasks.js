@@ -33,6 +33,9 @@ function startApp(name){
  * @param  {string} text data typed by the user
  * @returns {void}
  */
+
+
+ var myTasks = ['buying food', 'cleaning the house', 'walking'];
 function onDataReceived(text) {
   if (text === 'quit\n') {
     quit();

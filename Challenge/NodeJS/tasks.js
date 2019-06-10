@@ -9,12 +9,12 @@
  * @param  {string} name the name of the app
  * @returns {void}
  */
-function startApp(myriam){
+function startApp(name){
   process.stdin.resume();
   process.stdin.setEncoding('utf8');
   process.stdin.on('data', onDataReceived);
-  console.log(`Welcome to ${myriam}'s application!`)
-  console.log("Welcome to myriam's application")
+  console.log(`Welcome to ${name}'s application!`)
+  console.log("--------------------")
 }
 
 
@@ -36,10 +36,13 @@ function startApp(myriam){
 function onDataReceived(text) {
   if (text === 'quit\n') {
     quit();
-
-    else if (text === 'exit\n') {
-      quit();
   }
+
+  if (text === 'exit\n') {
+    quit();
+  }
+
+  
   else if(text === 'hello\n'){
     hello();
   }
@@ -80,8 +83,6 @@ function quit(){
   console.log('Quitting now, goodbye!')
   process.exit();
 }
-
-
 
 // The following line starts the application
 startApp("myriam")

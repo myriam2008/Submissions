@@ -36,32 +36,46 @@ function startApp(name){
 
 
  var myTasks = ['buying food', 'cleaning the house', 'walking'];
+
+
+
 function onDataReceived(text) {
-  if (text === 'quit\n') {
+
+  var myStr = text.trim('').split(" ")
+  var string  = text.trim('').split(" ") 
+
+  
+
+  if (text === 'quit\n' || (text ==='exit\n')) {
     quit();
   }
 
-  if (text === 'exit\n') {
-    quit();
-  
-  // if (text === 'help\n') {
-  //   help();
-  
-  
-  // else if(text === 'hello'){
-  //   hello();
-  }
-  else if(text.trim().substring(0, 5) === 'hello'){
-    hello(text);
-  }
+  else if(myStr[0] === 'hello' || text==='hello\n'){
+    hello(myStr);}
 
-  else if(text === 'help\n'){
-    help(); }
+    else if (text === 'help\n'){
+      help();
+    }
+
+  else if (text === 'list\n') {
+    list();
+  }
+ 
+  
+  // else if(text.trim().substring(0, 5) === 'hello'){
+  //   hello(text);
+  // }
+
+  // else if (text.trim().substring(0, 2) === 'add') {
+  //   add(text);
+  // }
+
+  
 
   else{
     unknownCommand(text);
   }
-}
+} 
 
 
 /**
@@ -70,9 +84,20 @@ function onDataReceived(text) {
  *
  * @param  {string} c the text received
  * @returns {void}
+ * 
+
  */
+function list(){
+  for (var i = 0; i < myTasks.length; i++) {
+    console.log((i+1)*1+'-'+myTasks[i]);
+
+  } }
 function unknownCommand(c){
   console.log('unknown command: "'+c.trim()+'"')
+}
+
+function add(t){
+  myTasks.push(t.trim().substring(2,t.trim().length))
 }
 
 
@@ -88,14 +113,14 @@ function unknownCommand(c){
 // }
 
 
-function hello(c){
-  console.log(c.trim() + '!')
+function hello(t){
+  console.log(t.join("!"))
 
 }
 // this is a comment about the help function
 function help(){
   
-  console.log('if you write hello and after it other words you can get multiple comments\nyou\nexit\nunknown command\n')
+  console.log('choose one of the following commands:\nhelp\nhello\nexit')
 }
 
 

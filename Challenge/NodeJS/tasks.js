@@ -40,14 +40,21 @@ function onDataReceived(text) {
 
   if (text === 'exit\n') {
     quit();
-  }
-  if (text === 'help\n') {
-    help();
-  }
   
-  else if(text === 'hello\n'){
-    hello();
+  // if (text === 'help\n') {
+  //   help();
+  
+  
+  // else if(text === 'hello'){
+  //   hello();
   }
+  else if(text.trim().substring(0, 5) === 'hello'){
+    hello(text);
+  }
+
+  else if(text === 'help\n'){
+    help(); }
+
   else{
     unknownCommand(text);
   }
@@ -68,29 +75,26 @@ function unknownCommand(c){
 
 /**
  * Says hello
+ * 
+ *
  *
  * @returns {void}
  */
-function hello(){
-  console.log('hello!')
+// function hello(){
+//   console.log('hello!')
+// }
+
+
+function hello(c){
+  console.log(c.trim() + '!')
+
 }
-
-
-/**
- * Exits the application
- *
- * @returns {void}
- */
-function quit(){
-  console.log('Quitting now, goodbye!')
-  process.exit();
-}
-
+// this is a comment about the help function
 function help(){
-  var y="choose a command n\ Do u want to quit?"
-  console.log(y);
-
+  
+  console.log('if you write hello and after it other words you can get multiple comments\nyou\nexit\nunknown command\n')
 }
+
 
 // The following line starts the application
-startApp("myriam")
+startApp("myriam") 

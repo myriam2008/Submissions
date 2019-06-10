@@ -9,12 +9,12 @@
  * @param  {string} name the name of the app
  * @returns {void}
  */
-function startApp(name){
+function startApp(myriam){
   process.stdin.resume();
   process.stdin.setEncoding('utf8');
   process.stdin.on('data', onDataReceived);
-  console.log(`Welcome to ${name}'s application!`)
-  console.log("--------------------")
+  console.log(`Welcome to ${myriam}'s application!`)
+  console.log("Welcome to myriam's application")
 }
 
 
@@ -79,4 +79,4 @@ function quit(){
 }
 
 // The following line starts the application
-startApp("Jad Sarout")
+startApp("myriam")

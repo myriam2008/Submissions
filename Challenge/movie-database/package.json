@@ -1,0 +1,26 @@
+// previous package.json stuff here...
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1", // this should be there
+  "dev": "nodemon index.js"
+},
+// next package.json stuff here...
+
+
+
+{
+  "name": "movie-database",
+  "version": "1.0.0",
+  "description": "or CMDB for short",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "myriam",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

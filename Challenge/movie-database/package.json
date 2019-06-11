@@ -1,9 +1,4 @@
-// previous package.json stuff here...
-"scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1", // this should be there
-  "dev": "nodemon index.js"
-},
-// next package.json stuff here...
+
 
 
 
@@ -13,7 +8,8 @@
   "description": "or CMDB for short",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
   },
   "author": "myriam",
   "license": "ISC",

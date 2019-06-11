@@ -30,53 +30,29 @@ function startApp(name){
  * The text received would be "batata"
  * This function  then directs to other functions
  * 
- * @param  {string} text data typed by the user
+ * @param  {string} text 
  * @returns {void}
  */
 
-
- var myTasks = ['buying food', 'cleaning the house', 'walking'];
-
-
-
 function onDataReceived(text) {
 
-  var myStr = text.trim('').split(" ")
+  var arraySTR = text.trim().split(" ")
+  console.log(arraySTR)
   var string  = text.trim('').split(" ") 
-
   
-
-  if (text === 'quit\n' || (text ==='exit\n')) {
+  if (text === 'quit\n' || text === 'exit\n') {
     quit();
   }
-
-  else if(myStr[0] === 'hello' || text==='hello\n'){
-    hello(myStr);}
-
-    else if (text === 'help\n'){
+  else if(arraySTR[0] == 'hello'){
+    hello(text);
+  }
+    else if(text === 'help\n'){
       help();
     }
-
-  else if (text === 'list\n') {
-    list();
-  }
- 
-  
-  // else if(text.trim().substring(0, 5) === 'hello'){
-  //   hello(text);
-  // }
-
-  // else if (text.trim().substring(0, 2) === 'add') {
-  //   add(text);
-  // }
-
-  
-
   else{
     unknownCommand(text);
   }
-} 
-
+}
 
 /**
  * prints "unknown command"
@@ -85,44 +61,32 @@ function onDataReceived(text) {
  * @param  {string} c the text received
  * @returns {void}
  * 
-
  */
-function list(){
-  for (var i = 0; i < myTasks.length; i++) {
-    console.log((i+1)*1+'-'+myTasks[i]);
-
-  } }
 function unknownCommand(c){
   console.log('unknown command: "'+c.trim()+'"')
 }
 
-function add(t){
-  myTasks.push(t.trim().substring(2,t.trim().length))
-}
-
 
 /**
- * Says hello
  * 
- *
- *
- * @returns {void}
+ * @param {string} t 
+ * @retu
  */
-// function hello(){
-//   console.log('hello!')
-// }
-
 
 function hello(t){
-  console.log(t.join("!"))
-
+  arr = t.toString().trim()
+  console.log(arr + '!')
 }
-// this is a comment about the help function
+
+
 function help(){
-  
   console.log('choose one of the following commands:\nhelp\nhello\nexit')
 }
 
+function quit(){
+  console.log('Quitting now, goodbye!')
+  process.exit();
+}
 
 // The following line starts the application
-startApp("myriam") 
+startApp("myriam")

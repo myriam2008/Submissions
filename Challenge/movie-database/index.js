@@ -145,8 +145,17 @@ var s = req.params.ID
               }
             });
 
+            app.get('/movies/delete/:id', (req, res) => {
+              var ID =req.params.id
+              if(ID>=0 && ID < movies.length){
+                  movies.splice(ID,1)
+                  res.send({status:200 ,data:movies})
 
-
+              }
+              else{
+                  res.send({status:404, error:true, message:'the movie' +ID+ 'does not exist'})
+              }
+            })
 
 
 

@@ -18,7 +18,7 @@ app.get('/test', (req, res) => {
         status: 200,
         message: "ok"
     })
-});
+    });
 var today = new Date();
 var Time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 app.get('/time', (req, res) => {
@@ -93,23 +93,32 @@ app.get('/movies/read/:tag?', (req, res) => {
                 status: 200,
                 data: movies.sort(function (a, b) { return b.rating - a.rating })
             })
-    }
-    else if (TAG == "bytitle") {
+          }
+         else if (TAG == "bytitle") {
 
 
-        res.send({
-            status: 200, data:
-                movies.sort(function (a, b) {
+                 res.send({
+                 status: 200, data:
+                    movies.sort(function (a, b) {
                     var x = a.title.toLowerCase();
                     var y = b.title.toLowerCase();
                     return x < y ? -1 : x > y ? 1 : 0;
                 })
         })
     }
-})
+}
+)
+
+app.get('/movies/read/id/:ID', (req, res) =>
+{ 
+var s = req.params.ID
+    if  (s -1 > 0 && s-1 < movies.length) { 
+        res.send({ status:300, data:movies[s-1] })
+    } 
+        else{ res.send( {status:404, error:true, 
+            message:'the movie <id> does not exist'} ) }}) ;
 
 
 
-
-
-    app.listen(3000)
+// /app.get('movies/add?title=<TITLE>&year=<YEAR>&rating=RATING', (req, res) =>            
+app.listen(3000, () => console.log('listinig on port 3000'))
